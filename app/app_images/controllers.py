@@ -12,7 +12,7 @@ import os
 # Definiendo la conexion a MongoDB
 MONGO_URI = 'mongodb://localhost'
 client = MongoClient(MONGO_URI)
-db = client['image_store']
+db = client['img_store']
 collection = db['images']
 
 
