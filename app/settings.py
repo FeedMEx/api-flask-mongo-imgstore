@@ -1,18 +1,18 @@
 from flask import request
+from dotenv import load_dotenv
+import os
 
 class Settings:
+    
+    load_dotenv() # Inicializando las variables de entorno
 
     # Configuraciones del servidor
 
-    PORT = '5000'
+    PORT = os.getenv('PORT')
 
-    ENV = 'development'
+    DEBUG = False
 
-    DEBUG = True
-
-    SECRET_KEY = 'my_secret_key' #cambiar una clave segura para producción
-
-    JWT_SECRET_KEY = 'my_jwt_secret_key' #cambiar una clave segura para producción
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY') # Valor almacenado en una variable de entorno
 
     JWT_BLACKLIST_ENABLED = True
 

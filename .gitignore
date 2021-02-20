@@ -1,1 +1,5 @@
 !app/app_images/img/
+app/__pycache__/
+app/app_images/__pycache__/
+app/app_users/__pycache__/
+.env

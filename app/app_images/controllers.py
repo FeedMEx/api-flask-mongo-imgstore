@@ -45,8 +45,8 @@ def insert_image():
     except: 
         return jsonify({'msg': 'Error desconocido'}), 415
     
-    if len(image.fp.read()) > 256000:
-        return jsonify({'value': False, 'msg': 'No esta permitido subir imagenes mayores al limite de 256 KB'})
+    if len(image.fp.read()) > 5000000:
+        return jsonify({'value': False, 'msg': 'No esta permitido subir imagenes mayores al limite de 5 Mb'})
     
     ext = image.format.lower() # extension de la imagen
 
